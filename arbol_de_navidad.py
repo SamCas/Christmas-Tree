@@ -16,13 +16,13 @@ class ChristmasTree(object):
 
     def height_per_level(self):
         global height_pl, diameter
-        if height >= 0.1 and height < 1:
+        if height >= 0.01 and height <= 1:
             height_pl = 0.08
             diameter = .03
-        if height >= 1 and height < 2.24:
+        if height >= 1.1 and height <= 2.24:
             height_pl = 0.15
             diameter = .06
-        if height >= 2.25 and height < 5:
+        if height >= 2.25 and height <= 4.9:
             height_pl = 0.25
             diameter = .12
         if height >= 5:
