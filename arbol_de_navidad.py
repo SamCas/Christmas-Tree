@@ -8,11 +8,11 @@ class ChristmasTree(object):
 
     def height_input(self):
         global height
-        height = input('Please type the hegiht of the tree: ')
+        height = float(input('Please type the hegiht of the tree: '))
 
     def radius_calc(self):
         global radius
-        radius = 0.43125*height
+        radius = 0.43125 * height
 
     def height_per_level(self):
         global height_pl, diameter
@@ -56,7 +56,7 @@ class ChristmasTree(object):
         print(' Number of levels: %r' %(level_number))
         print("===========================DATA==========================")
 
-    def total_of_bubbles(slef):
+    def total_of_bubbles(self):
         print("\n===========================BUBBLES==========================")
         print("\n The total of bubbles are: %1.0f" %(my_list_total))
         print("\n===========================BUBBLES==========================")
