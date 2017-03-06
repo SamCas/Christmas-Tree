@@ -35,15 +35,18 @@ class ChristmasTree(object):
         level_number = int(round(level_number))
 
     def perimeter_per_level(self):
-        global perimeter, bubbles
+        global perimeter, bubbles, my_list, my_list_total
+        my_list = []
         print ("\n==========================LINES==========================")
         for i in range(level_number):
             i += 1
             perimeter = (i*height_pl*2*radius*3.1416)
             bubbles = perimeter/diameter*.5
-            bubbles += bubbles
-            print("\n The perimeter of the level: %r is: %1.2f,\n and the number of bubbles to cover up this line is: %1.0f" %(i,perimeter,bubbles))
+            print("\n The perimeter of the level: %r is: %1.2f,\n and the number of bubbles to cover up this line is: %1.0f" %(i,perimeter,int(bubbles)))
+            my_list.append(int(bubbles))
+            # print(my_list)
         print ("============================LINES==========================")
+        my_list_total = sum(my_list)
 
     def print_output(self):
         print("===========================DATA==========================")
@@ -55,7 +58,7 @@ class ChristmasTree(object):
 
     def total_of_bubbles(slef):
         print("\n===========================BUBBLES==========================")
-        print("\n The total of bubbles are: %1.0f" %(bubbles))
+        print("\n The total of bubbles are: %1.0f" %(my_list_total))
         print("\n===========================BUBBLES==========================")
 
 def main():
